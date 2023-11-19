@@ -1,0 +1,54 @@
+*{box-sizing: border-box;}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+}
+
+header {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    & img{
+        padding: 40px;
+        margin: 0 auto;
+    }
+}
+
+img {
+    width: 100%;
+    border-radius: 1em;
+}
+.plato {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid #3e3e3e;
+    margin: 40px;
+    border-radius: 1em;
+}
+
+.plato-img {
+    text-align: end;
+    & img {
+        max-width: 400px;
+    }
+}
+
+.plato-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    padding: 40px;
+    text-align: start;
+}
+
+@media (max-width: 900px) {
+    .plato{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
